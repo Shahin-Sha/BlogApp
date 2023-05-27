@@ -2,14 +2,16 @@ import Container from "react-bootstrap/Container";
 import { useForm } from "react-hook-form";
 
 
-
 export default function App() {
 
 
 
 
     const { register, handleSubmit } = useForm();
-    const onFormSubmit = data => console.log(data);
+    const onFormSubmit = (data, e) => {
+        console.log(data);
+        e.target.reset(); 
+    };
     const onErrors = errors => console.error(errors);
 
 
@@ -30,7 +32,7 @@ export default function App() {
                     <input className="ms-4" type="text" name="Description" {...register('Description', { required: "Description is required" })} id="" /><br></br><br></br>
                     <label htmlFor="">Author Name</label>
                     <input className="ms-2" type="text" name="AuthorName" {...register('AuthorName', { required: "AuthorName is required" })} id="" /><br></br><br></br>
-                    
+
 
 
                     <button type="submit">Submit</button>
