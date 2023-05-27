@@ -8,11 +8,10 @@ export default function Nav1() {
         <div>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Navbar.Brand href="/" ><h1>Blog</h1></Navbar.Brand>
+                    <Nav className="text-center">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/AddBlog.jsx">Add Blog</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
